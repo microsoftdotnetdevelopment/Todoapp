@@ -32,6 +32,7 @@ Basically, this app lets you keep track of your to-do list. You can add tasks, r
 ◉ Project1: This is the main part! It has the backend and frontend code. Inside, you’ll find:
 
     ◉ clientapp/: Frontend Angular code lives here.
+https://localhost:44465/
 
     ◉ controllers/: This is where API requests are handled.
 
@@ -42,7 +43,8 @@ Basically, this app lets you keep track of your to-do list. You can add tasks, r
     ◉ utilities/: Some helper functions.
 
     ◉ views/: Razor Views (the UI for backend rendering).
-
+ViewModels
+Properties folder
     ◉ wwwroot/: Static files like CSS and images.
 
 **Files inside Project1:**
@@ -50,6 +52,13 @@ Basically, this app lets you keep track of your to-do list. You can add tasks, r
     ◉ Project1.csproj: This is the C# project file that defines project properties and dependencies.
 
     ◉ WeatherForecast.cs: This is a sample file I added to test the API. It’s just returning some basic weather forecast data.
+https://localhost:44465/weatherforecast  get api
+ {
+        "date": "2024-11-07T20:13:25.0158859+05:30",
+        "temperatureC": -4,
+        "temperatureF": 25,
+        "summary": "Scorching"
+    },
 
     ◉ appsettings.Development.json & appsettings.json: These files are for storing application settings (like database connection strings). The development one is for when I run the app locally.
 
@@ -106,7 +115,8 @@ You have reached the end, Open through your browser and check it out!
 
 ◉ Want to run the tests I wrote, you can go to the TestProject1 folder and use this command:
 
-        dotnet test
+-        dotnet test
+-        dotnet test TestProject1
 
 This command will run the tests to show if it works or breaks
 
@@ -126,3 +136,47 @@ Thank you for exploring this project! This is just the beginning of great applic
 Feel free to fork this repository, experiment with the code, and build upon it.
 
 If you have any questions or need further help, feel free to reach out!
+
+  
+
+
+
+https://localhost:<port>/swagger/index.html
+
+https://localhost:7054/api/todoItems get
+GET /api/todoitems	Get all to-do items	None	Array of to-do items
+GET /api/todoitems/{id}	Get an item by ID	None	To-do item
+POST /api/todoitems	Add a new item	To-do item	To-do item
+{
+  "name": "walkhjghj ",
+  "isComplete": true
+}
+PUT /api/todoitems/{id}	Update an existing item  	To-do item	None
+{
+    "id": 2,
+  "name": "walkhjghj ",
+  "isComplete": true
+}
+DELETE /api/todoitems/{id}    	Delete an item    	None	None
+
+https://localhost:7054/home FE of pie shop
+
+whenever there is change in db delete .cs and .designer.cs file and create new migration
+Add-Migration MyMigration -context DataContextName
+add-migration Initial -context PieShopDbContext 
+
+ dotnet tool update --global dotnet-ef
+ dotnet tool install --local dotnet-ef 
+
+update-database -context PieShopDbContext 
+
+  Categories
+Pies
+Orders
+OrderDetails -> OrderLines
+
+
+https://localhost:7054/Order  GET html
+
+
+https://localhost:7054/Order/Details?orderId=1 GET html
