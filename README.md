@@ -175,8 +175,22 @@ Pies
 Orders
 OrderDetails -> OrderLines
 
+dotnet build will build using a solution file if one is present (the *.sln file).
+
+dotnet run however requires a project file (*.csproj).
+
 
 https://localhost:7054/Order  GET html
 
 
 https://localhost:7054/Order/Details?orderId=1 GET html
+
+dotnet --version
+
+dotnet new console -o app
+cd app
+code . # to open project in VSCode
+
+dotnet run
+
+dotnet build
