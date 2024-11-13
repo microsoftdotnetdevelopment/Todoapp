@@ -38,7 +38,8 @@ https://localhost:44465/
 
     ◉ migrations/: Entity Framework migrations for the database.
 
-    ◉ models/: The C# models for database.
+    ◉ models/: The C# models for database. 
+    configuration folder
 
     ◉ utilities/: Some helper functions.
 
@@ -176,21 +177,28 @@ Orders
 OrderDetails -> OrderLines
 
 dotnet build will build using a solution file if one is present (the *.sln file).
-
 dotnet run however requires a project file (*.csproj).
-
+dotnet --version check .net sdk installed or not
 
 https://localhost:7054/Order  GET html
 
 
 https://localhost:7054/Order/Details?orderId=1 GET html
 
-dotnet --version
+
 
 dotnet new console -o app
 cd app
 code . # to open project in VSCode
 
-dotnet run
-
 dotnet build
+
+Flow-
+create model
+data access
+controller-data
+api
+
+it creates 2 APIs one Is to get all employees list and another one is to get details of particular employee.
+http://localhost:52334/api/employee
+http://localhost:52334/api/employee/2
