@@ -176,6 +176,7 @@ Pies
 Orders
 OrderDetails -> OrderLines
 
+open terminal and run these commands-
 dotnet build will build using a solution file if one is present (the *.sln file).
 dotnet run however requires a project file (*.csproj).
 dotnet --version check .net sdk installed or not
@@ -202,3 +203,5 @@ api
 it creates 2 APIs one Is to get all employees list and another one is to get details of particular employee.
 http://localhost:52334/api/employee
 http://localhost:52334/api/employee/2
+
+learn how to create build and publish this project to use those apis in frontend
